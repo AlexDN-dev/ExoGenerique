@@ -4,7 +4,7 @@ namespace exoGenerique.Entities;
 
 public class Depot<T> : IDepot<T>
 {
-    protected List<T> stock = new List<T>();
+    private List<T> stock = new List<T>();
     
     public void addItem(T p)
     {

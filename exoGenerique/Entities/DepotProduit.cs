@@ -7,7 +7,7 @@ public class DepotProduit<T> : Depot<T> where T : IProduit
     public double PrixTotal()
     {
         double total = 0;
-        foreach (T produit in stock)
+        foreach (T produit in GetStock())
         {
             total += produit.Prix;
         }
