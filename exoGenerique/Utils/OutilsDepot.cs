@@ -1,4 +1,7 @@
-﻿namespace exoGenerique.Utils;
+﻿using exoGenerique.Entities;
+using exoGenerique.Interfaces;
+
+namespace exoGenerique.Utils;
 
 public static class OutilsDepot
 {
@@ -9,7 +12,7 @@ public static class OutilsDepot
 
     public static int FindValue<T>(List<T> liste, T value)
     {
-        for (int i = 0; i <= liste.Count; i++)
+        for (int i = 0; i < liste.Count; i++)
         {
             if (liste[i].Equals(value))
             {

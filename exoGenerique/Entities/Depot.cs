@@ -26,11 +26,6 @@ public class Depot<T> : IDepot<T>
         return stock.Count;
     }
 
-    public List<T> GetStock()
-    {
-        return stock;
-    }
-
     public void ShowStock()
     {
         foreach (var s in stock)

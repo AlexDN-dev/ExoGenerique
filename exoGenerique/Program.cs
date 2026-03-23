@@ -17,9 +17,16 @@ depotAppareil.addItem(new Appareil("Appareil 3", 85));
 
 depotLivre.ShowStock();
 depotAppareil.ShowStock();
+Console.WriteLine(depotLivre.PrixTotal());
 
 Console.WriteLine(l1 + " " + l2);
 OutilsDepot.SwapValue(ref l1, ref l2);
 Console.WriteLine(l1 + " " + l2);
 
-Console.WriteLine(OutilsDepot.FindValue<Livre>(depotLivre.GetStock(), l1));
+List<Livre> list = new List<Livre>();
+for (int i = 0; i < depotLivre.CountList(); i++)
+{
+    list.Add(depotLivre.GetItem(i));
+}
+
+Console.WriteLine(OutilsDepot.FindValue<Livre>(list, l1));
